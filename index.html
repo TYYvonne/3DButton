@@ -23,11 +23,11 @@
         border-top: 0 none;
         border-left: 0 none;
         cursor: pointer;
-        -webkit-transition: transform .5s ease;
-           -moz-transition: transform .5s ease;
-            -ms-transition: transform .5s ease;
-             -o-transition: transform .5s ease;
-                transition: transform .5s ease;
+        -webkit-transition: transform .4s ease;
+           -moz-transition: transform .4s ease;
+            -ms-transition: transform .4s ease;
+             -o-transition: transform .4s ease;
+                transition: transform .4s ease;
     }
 
     .skew:before {
@@ -51,11 +51,11 @@
     .skew-main{
         transform: translate(-20px, -20px) skew(15deg);
         line-height: 80px;
-        -webkit-transition: all .5s ease;
-           -moz-transition: all .5s ease;
-            -ms-transition: all .5s ease;
-             -o-transition: all .5s ease;
-                transition: all .5s ease;
+        -webkit-transition: all .4s ease;
+           -moz-transition: all .4s ease;
+            -ms-transition: all .4s ease;
+             -o-transition: all .4s ease;
+                transition: all .4s ease;
     }
 
     .skew.active .skew-main {
@@ -73,65 +73,63 @@
     .mask {
         position: absolute;
         left: 207px;
-        top: -22px;
+        top: -23px;
         width: 0px;
         height: 0px;
         background: #fff;
         z-index: 4;
-        -webkit-transition: all .5s ease;
-           -moz-transition: all .5s ease;
-            -ms-transition: all .5s ease;
-             -o-transition: all .5s ease;
-                transition: all .5s ease;
+        -webkit-transition: all .4s ease;
+           -moz-transition: all .4s ease;
+            -ms-transition: all .4s ease;
+             -o-transition: all .4s ease;
+                transition: all .4s ease;
     }
 
     .mask2 {
         top: 61px;
         left: 202px;
-        background: #FFFBBA;
+        background: #FFF878;
     }
 
     .mask3 {
-        left: -21px;
+        left: -20px;
         top: 62px;
         height: 23px;
     }
 
     .mask.active {
-        animation: maskanimation .4s ease forwards;
+        animation: maskanimation .3s ease forwards;
     }
 
     .line {
         width: 16px;
-        height: 4px;
+        height: 5px;
         background: #353535;
         position: absolute;
         left: 208px;
         top: -10px;
         transform: skewY(52deg);
         z-index: -2;
-        -webkit-transition: all .5s ease;
-           -moz-transition: all .5s ease;
-            -ms-transition: all .5s ease;
-             -o-transition: all .5s ease;
-                transition: all .5s ease;
+        -webkit-transition: all .4s ease;
+           -moz-transition: all .4s ease;
+            -ms-transition: all .4s ease;
+             -o-transition: all .4s ease;
+                transition: all .4s ease;
     }
 
     .line1:before {
         content: "";
         position: absolute;
-        left: -3px;
-        top: 4px;
-        width: 0;
-        height: 0;
-        border: 8px dashed transparent;
-        border-top: 40px solid #FFCF01;
-        transform: skewY(5deg);
+        left: 0px;
+        top: 5px;
+        width: 12px;
+        height: 17px;
+        background-color: #FFCF01;
         z-index: -2;
     }
 
     .line1.active:before {
-        animation: btcolor .5s forwards;
+        animation: btcolor .4s forwards;
     }
 
     .line.line2 {
@@ -143,7 +141,7 @@
     }
 
     .line.line3 {
-        top: 72px;
+        top: 71px;
         background: #353535;
         left: -20px;
         transform: skewY(39deg);
@@ -153,30 +151,32 @@
 
     .line.line3:before {
         content: "";
-        width: 0;
-        height: 0;
         position: absolute;
-        left: 2px;
-        top: -19px;
-        border: 20px dashed transparent;
-        border-left: 18px solid #FFCF01;
-        transform: rotate(34deg) skewY(26deg);
+        left: 5px;
+        top: -12px;
+        width: 15px;
+        height: 13px;
+        background-color: #FFCF01;
     }
 
     .line.line3.active:before {
-        animation: blcolor .5s forwards;
+        animation: blcolor .4s forwards;
     }
 
     .skew.active {
-        animation: buttonactiveanimation .5s forwards;
+        animation: buttonactiveanimation .4s forwards;
     }
 
     .skew.active::before {
-        animation: buttonanimation .5s forwards;
+        animation: buttonanimation .4s forwards;
     }
 
     .skew:hover::before {
         background-color: #FFFBBA;
+    }
+
+    .skew.active:hover .mask2 {
+        background: #FFFBBA;
     }
 
     /*添加动画效果*/
@@ -192,7 +192,7 @@
         }
         100%{
             width: 20px;
-            height: 22px;
+            height: 23px;
         }
     }
 
@@ -216,19 +216,19 @@
 
     @keyframes blcolor{
         0%{
-            border-left-color: #FFCF01;
+            background: #FFCF01;
         }
         100%{
-            border-left-color: transparent;
+            background: transparent;
         }
     }
 
     @keyframes btcolor{
         0%{
-            border-top-color: #FFCF01;
+            background: #FFCF01;
         }
         100%{
-            border-top-color: transparent;
+            background: : transparent;
         }
     }
 </style>
